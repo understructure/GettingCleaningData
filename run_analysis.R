@@ -15,7 +15,7 @@
 
 ## BEG 1. Merges the training and the test sets to create one data set.
 rm(list=ls())
-#setwd("whatever")
+setwd("whatever")
 #dir("test")
 
 #?read.table
@@ -93,7 +93,15 @@ final_df <- summarise_each(average_by_activity_and_subject, funs(mean))
 
 final_df
 
+colnames(final_df) <- paste(colnames(final_df), "_MEAN", sep="")
+colnames(final_df)[1] <- "subject"
+colnames(final_df)[2] <- "activity"
 write.csv(final_df, "project_tidy_data.txt", row.names=FALSE)
+
+for(i in 3:81){
+  cat(paste(colnames(final_df)[i], " - ", "mean of the variable ", colnames(final_df)[i], " summarized by subject and activity (units are as they were in original file) \n"))
+}
+
 # sanity checks
 # tBodyAcc-mean()-Z subject 1 WALKING: -0.1111481
 # mean(new_z[new_z$subject == 1 & new_z$activity == "WALKING", "tBodyAcc-mean()-Z"])
