@@ -98,9 +98,7 @@ colnames(final_df)[1] <- "subject"
 colnames(final_df)[2] <- "activity"
 write.csv(final_df, "project_tidy_data.txt", row.names=FALSE)
 
-for(i in 3:81){
-  cat(paste(colnames(final_df)[i], " - ", "mean of the variable ", colnames(final_df)[i], " summarized by subject and activity (units are as they were in original file) \n"))
-}
+
 
 # sanity checks
 # tBodyAcc-mean()-Z subject 1 WALKING: -0.1111481
@@ -108,3 +106,8 @@ for(i in 3:81){
 
 # tBodyAcc-mean()-X subject 2 WALKING_UPSTAIRS: 0.2471648
 # mean(new_z[new_z$subject == 2 & new_z$activity == "WALKING_UPSTAIRS", "tBodyAcc-mean()-X"])
+
+# this function creates lines 3-81 of the codebook:
+#for(i in 3:81){
+#  cat(paste(colnames(final_df)[i], " - ", "mean of the variable ", colnames(final_df)[i], " summarized by subject and activity (units are as they were in original file) \n"))
+#}
