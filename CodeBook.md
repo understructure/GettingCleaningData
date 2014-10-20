@@ -11,7 +11,15 @@ Here is a list of the columns and what they mean:
 
 
 subject - The subject number, 1-30
-activity - The activity as a factor, as defined in the activity_labels.txt file
+activity - The activity as a factor:
+
+1 WALKING
+2 WALKING_UPSTAIRS
+3 WALKING_DOWNSTAIRS
+4 SITTING
+5 STANDING
+6 LAYING
+
 tBodyAcc-mean()-X_MEAN - mean of the variable tBodyAcc-mean()-X_MEAN summarized by subject and activity (units are as they were in original file)
 tBodyAcc-mean()-Y_MEAN - mean of the variable tBodyAcc-mean()-Y_MEAN summarized by subject and activity (units are as they were in original file)
 tBodyAcc-mean()-Z_MEAN - mean of the variable tBodyAcc-mean()-Z_MEAN summarized by subject and activity (units are as they were in original file)
