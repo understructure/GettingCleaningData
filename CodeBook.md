@@ -1,3 +1,7 @@
+NOTE:  Plesase use RAW view to read this file, thank you!!
+
+
+
 From the assignment page:
 "Was code book submitted to GitHub that modifies and updates the codebooks
 available to you with the data to indicate all the variables and summaries
